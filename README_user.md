@@ -22,3 +22,26 @@ Build the Docker image
 ```
 make build
 ```
+Start the docker container.
+```
+make start
+```
+
+Start the streamlit app
+```
+make streamlit
+```
+Copy in the url in the browser
+```
+http://localhost:8508
+```
+
+To work in a Jupyter Notebook, start the notebook server with
+```
+make notebook
+```
+Copy the url in the browser
+```
+http://localhost:1342/tree
+```
+Go to `Notebooks/test`, open and run the test notebook `test.ipynb`.
