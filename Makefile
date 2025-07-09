@@ -44,6 +44,9 @@ lint:
 test:
 	./bin/dev/docker-exec.sh poetry run pytest -s
 
+streamlit:
+	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/main_app/streamlit_main.py
+
 streamlit_uc:
 	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/unit_commitment_01/streamlit_app.py
 
