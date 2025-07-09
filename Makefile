@@ -48,7 +48,12 @@ streamlit_uc:
 	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/unit_commitment_01/streamlit_app.py
 
 kill_streamlit:
-	ps aux | grep streamlit | awk '{print $2}' | xargs kill -9
+	@if docker exec electric-grid-balancing ps aux | grep streamlit | grep -v grep > /dev/null; then \
+		docker exec electric-grid-balancing bash -c "ps aux | grep streamlit | grep -v grep | awk '{print \$$2}' | xargs kill -9"; \
+		echo "Streamlit processes killed inside container"; \
+	else \
+		echo "No streamlit processes found in container"; \
+	fi
 
 clean_pycache:
 	find . -type d -name "__pycache__" -exec rm -rf {} \;
