@@ -44,8 +44,8 @@ lint:
 test:
 	./bin/dev/docker-exec.sh poetry run pytest -s
 
-streamlit:
-	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/streamlit_app/run_test_02.py
+streamlit_uc:
+	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/unit_commitment_01/streamlit_app.py
 
 kill_streamlit:
 	ps aux | grep streamlit | awk '{print $2}' | xargs kill -9

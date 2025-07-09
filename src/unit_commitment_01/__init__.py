@@ -1,0 +1,1 @@
+"""Python package to solve the optimisation for the unit commitment problem."""

@@ -17,9 +17,6 @@ seaborn = "^0.13.2"
 ipython = "^8.30.0"
 python-dotenv = {extras = ["cli"], version = "^1.0.1"}
 coloredlogs = ">=6.1,<=14.0"  # Adjust this to be compatible with Dagster
-dagster = "^1.9.3"
-dagster-postgres = "^0.25.3"
-dagster-webserver = "^1.9.3"
 requests = "^2.32.3"
 psycopg2-binary = "^2.9.10"
 ibis-framework = {extras = ["duckdb", "postgres", "sqlite"], version = "^9.5.0"}
@@ -42,6 +39,7 @@ yfinance = "^0.2.55"
 streamlit = "^1.45.0"
 fuzzywuzzy = "^0.18.0"
 python-levenshtein = "^0.27.1"
+ortools = "^9.14.6206"
 
 
 [build-system]
