@@ -47,7 +47,11 @@ test:
 streamlit_uc:
 	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/unit_commitment_01/streamlit_app.py
 
-kill_streamlit:
+streamlit_vpp:
+	./bin/dev/docker-exec.sh ./bin/dev/streamlit-start.sh src/vpp_example_01/streamlit_app.py
+
+
+streamlit_kill:
 	@if docker exec electric-grid-balancing ps aux | grep streamlit | grep -v grep > /dev/null; then \
 		docker exec electric-grid-balancing bash -c "ps aux | grep streamlit | grep -v grep | awk '{print \$$2}' | xargs kill -9"; \
 		echo "Streamlit processes killed inside container"; \
