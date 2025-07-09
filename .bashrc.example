@@ -1,0 +1,7 @@
+echo "Start read .bashrc"
+
+alias rm='rm -i'
+alias ls='ls --color -G -h'
+alias grep='grep --color=auto'
+
+echo "End read .bashrc"

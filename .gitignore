@@ -1,0 +1,13 @@
+**/.ipynb_checkpoints
+**/__pycache__/
+
+.env
+.env~
+.bashrc
+.Trash-1000
+
+data/*
+
+**/.DS_Store
+
+*info_code_trading.txt*
